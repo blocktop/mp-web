@@ -212,13 +212,23 @@ var _escData = map[string]*_escFile{
 	"/assets/index.html": {
 		name:    "index.html",
 		local:   "assets/index.html",
-		size:    254,
-		modtime: 1572354000,
+		size:    274,
+		modtime: 1572391228,
 		compressed: `
-H4sIAAAAAAAC/3RPvW6GMAzceQo3+0fE1sFk6N9WtQMdOrpgGoRJomAJ9e0rSIYunc72+c4+vHt6exw+
-35/B6yauwRNAKHz3hoM5B0yTawAAcGMlGD3lnbU3H8PL7d5UShcVdg8Sx1VjglfKK2sSGhlt4Rq0xQq/
-4vRTZb77R+O7upEKXjWBzzz3xrYHi9zWEI9gd2URyq3GTYz728G8CKOl6mTT+UM5jvaK+xsAAP//+Qkc
-ZP4AAAA=
+H4sIAAAAAAAC/3SQv07EMAyH9zyFyX6NbmNwM/BvQzAcA6NJfTRXN4kSSwdvj0I7sDBZ9vfTZ8t48/By
+f3p/fYRZV/EGewGh9DlaTrYPmCZvAABwZSUIM9XGOtq309Ph1u5Iowr7O8lh0VzgmerCWoQCo9uYQbep
+8CNP3118/Cc/H73BsosJ5srn0brhyiKHJeVrck1ZhOqgeRXr/3ZwjsLoqK8r3mALNRaFVsNoL83FNPHX
+cGnWo9tQD+4Hud8X/AQAAP//z4BcbRIBAAA=
+`,
+	},
+
+	"/assets/js/index.js": {
+		name:    "index.js",
+		local:   "assets/js/index.js",
+		size:    12,
+		modtime: 1572391208,
+		compressed: `
+H4sIAAAAAAAC/0rOzysuUahQsFUw5AIEAAD//9RfpjwMAAAA
 `,
 	},
 
@@ -227,11 +237,22 @@ ZP4AAAA=
 		local: `assets`,
 		isDir: true,
 	},
+
+	"/assets/js": {
+		name:  "js",
+		local: `assets/js`,
+		isDir: true,
+	},
 }
 
 var _escDirs = map[string][]os.FileInfo{
 
 	"assets": {
 		_escData["/assets/index.html"],
+		_escData["/assets/js"],
+	},
+
+	"assets/js": {
+		_escData["/assets/js/index.js"],
 	},
 }

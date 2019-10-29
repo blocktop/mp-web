@@ -38,8 +38,7 @@ func setRoutes(r *chi.Mux) {
 	r.Get("/health", middleware.HealthHandler)
 
 	r.Get("/.well-known/stellar.toml", handleGetStellarTOML)
-	r.Get("/", http.FileServer(FS(false)).ServeHTTP)
-
+	r.Get("/assets/", http.FileServer(FS(false)).ServeHTTP)
 }
 
 func handleGetStellarTOML(w http.ResponseWriter, r *http.Request) {

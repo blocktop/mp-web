@@ -1,7 +1,7 @@
-ARG SERVICE_NAME=web-auth-server
+ARG SERVICE_NAME=web
 FROM blocktop/golang:build@sha256:52ad9d664c9bb3f0af24142b1ed6cf35f72de4beb0f3e88763958329ddb3f054 as build
 
-EXPOSE 3000
+EXPOSE 8001
 
 FROM build as test
 CMD ["make", "test"]
@@ -16,4 +16,4 @@ ONBUILD COPY --from=build /usr/share/zoneinfo /usr/share/zoneinfo
 ARG TLS_CERT
 ARG TLS_KEY
 
-EXPOSE 3000
+EXPOSE 8001
